@@ -1,14 +1,12 @@
-import socket # Python's socket module allows us to attempt a TCP connection
+import socket # The socket module can be used to attempt a TPC connection
 
-sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-sock.settimeout(1) # We attempt this here
+ip = "192.168.1.1" # The address is best saved as a var because we call it a lot
 
-result = sock.connect_ex(("192.168.1.1", 80)) # .connect_ex() returns 0 if the port is open and anything else if not...
+for port in [22, 80, 443]: # For each of the commonly open ports...
+    sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    sock.settimeout(0.5) # We are attempting a connection...
 
-# This is a basic check if statement
-if result == 0:
-    print("Port is open")
-else:
-    print("Port is closed")
-# ...which displays the results
-sock.close()
+    if sock.connect_ex((ip, port)) == 0:
+        print(f"Port {port} is open") # And displaying results
+
+    sock.close()
