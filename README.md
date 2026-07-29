@@ -27,3 +27,5 @@ Now that I can check all the IP addresses on a subnet for the selected, commonly
 3. For each port in the commonly opened ports (22, 80, 443)...
 4. Attempt a TCP connection.
 5. Record results.
+
+# Mission complete
