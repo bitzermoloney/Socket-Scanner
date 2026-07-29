@@ -13,3 +13,6 @@ This project will need to:
 
 # Learning
 The first step to creating this program would be to learn about sockets. Python's socket module allows us developers to attempt a TCP connection, but the succesfulness of the connection depends on the permissions of the device the program is running on and laws/policies. I found that the function .connect_ex() could be used to calculate whether the port was open or not (annotated). 0 is returned if the port is open, and anything else is returned if not.
+
+# One time
+By this point, we had a working program which is attempting a TCP connection on a socket it can find, checking if the port is open or not, and presenting the result. Next, I needed to get the program to scan a host. To do this, the main difference is that we check the most common ports using a for loop (for each in 22, 80, 443).
