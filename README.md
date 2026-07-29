@@ -16,3 +16,6 @@ The first step to creating this program would be to learn about sockets. Python'
 
 # One time
 By this point, we had a working program which is attempting a TCP connection on a socket it can find, checking if the port is open or not, and presenting the result. Next, I needed to get the program to scan a host. To do this, the main difference is that we check the most common ports using a for loop (for each in 22, 80, 443).
+
+# Many times
+Next, I need to adapt the program to be able to check many IP addresses. To do this, I can use python's ipaddress module, which allows us to retrieve all the addresses in a subnet. To do this we use the function .ip_network(). We can save the addresses we have as an array and pass through them in a neat for loop.
