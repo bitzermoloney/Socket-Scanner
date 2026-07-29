@@ -1,7 +1,7 @@
 # Socket-Scanner
 This program takes an IP address of a subnet, tries to determine which hosts are online, checks whether common TCP ports are open and displays the results.
 
-# Cyber Information
+# Information
 As an undergraduate in CS with Cyber Security (CSCS), I decided my next project should be surrounding networks and network security. This project aims to expand my skills in python networking.
 
 # Planning
@@ -19,3 +19,11 @@ By this point, we had a working program which is attempting a TCP connection on 
 
 # Many times
 Next, I need to adapt the program to be able to check many IP addresses. To do this, I can use python's ipaddress module, which allows us to retrieve all the addresses in a subnet. To do this we use the function .ip_network(). We can save the addresses we have as an array and pass through them in a neat for loop.
+
+# Combining
+Now that I can check all the IP addresses on a subnet for the selected, commonly opened ports using python's socket and ipaddress modules, I can combine my skills to create the full program, which will:
+1. Find IP addresses on subnet.
+2. For each host...
+3. For each port in the commonly opened ports (22, 80, 443)...
+4. Attempt a TCP connection.
+5. Record results.
